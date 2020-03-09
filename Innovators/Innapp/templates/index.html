@@ -1,0 +1,595 @@
+{% extends 'headerandfooter.html' %}
+{% block content %}
+{% load static %}
+{#<!DOCTYPE html>#}
+{#<html dir="ltr" lang="en">#}
+{#<head>#}
+{#    {% load staticfiles %}#}
+{#<!-- Meta Tags -->#}
+{#<meta name="viewport" content="width=device-width,initial-scale=1.0"/>#}
+{#<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>#}
+{#<meta name="description" content="DentalPlus - Dental Care HTML5 Template" />#}
+{#<meta name="keywords" content="building,business,construction,cleaning,transport,workshop" />#}
+{#<meta name="author" content="ThemeMascot" />#}
+{##}
+{#<!-- Page Title -->#}
+{#<title>Innovators</title>#}
+{##}
+{#<!-- Favicon and Touch Icons -->#}
+{#<link href="{% static 'images/donation.png' %}" rel="shortcut icon" type="image/png">#}
+{#<link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">#}
+{#<link href="{% static 'images/apple-touch-icon-72x72.png' %}" rel="apple-touch-icon" sizes="72x72">#}
+{#<link href="{% static 'images/apple-touch-icon-114x114.png' %}" rel="apple-touch-icon" sizes="114x114">#}
+{#<link href="{% static 'images/apple-touch-icon-144x144.png' %}" rel="apple-touch-icon" sizes="144x144">#}
+{##}
+{#<!-- Stylesheet -->#}
+{#<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">#}
+{##}
+{#<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">#}
+{#<link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" type="text/css">#}
+{#<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">#}
+{#<link href="{% static 'css/css-plugin-collections.css' %}" rel="stylesheet"/>#}
+{#<link id="menuzord-menu-skins" href="{% static 'css/menuzord-skins/menuzord-boxed.css' %}" rel="stylesheet"/>#}
+{#<link href="{% static 'css/style-main.css' %}" rel="stylesheet" type="text/css">#}
+{#<link href="{% static 'css/preloader.css' %}" rel="stylesheet" type="text/css">#}
+{#<link href="{% static 'css/custom-bootstrap-margin-padding.css' %}" rel="stylesheet" type="text/css">#}
+{#<link  href="{% static 'js/revolution-slider/css/settings.css' %}" rel="stylesheet" type="text/css"/>#}
+{#<link  href="{% static 'js/revolution-slider/css/layers.css' %}" rel="stylesheet" type="text/css"/>#}
+{#<link  href="{% static 'js/revolution-slider/css/navigation.css' %}" rel="stylesheet" type="text/css"/>#}
+{#<!-- CSS | Theme Color -->#}
+{#<link href="{% static 'css/colors/theme-skin-blue4.css' %}" rel="stylesheet" type="text/css">#}
+{#<!-- external javascripts -->#}
+{#<script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>#}
+{#<script src="{% static 'js/jquery-ui.min.js' %}"></script>#}
+{#<script src="{% static 'js/bootstrap.min.js' %}"></script>#}
+{#<script src="{% static 'js/jquery-plugin-collection.js' %}"></script>#}
+{#<script src="{% static 'js/revolution-slider/js/jquery.themepunch.tools.min.js' %}"></script>#}
+{#<script src="{% static 'js/revolution-slider/js/jquery.themepunch.revolution.min.js' %}"></script>#}
+{#</head>#}
+{#<body>#}
+{#<div id="wrapper" class="clearfix">#}
+{#  <!-- preloader -->#}
+{#  <div id="preloader">#}
+{#    <div id="spinner">#}
+{#      <div class="preloader-dot-loading">#}
+{#        <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>#}
+{#  </div>#}
+{#  #}
+{#  <!-- Header -->#}
+{#  <header id="header" class="header">#}
+{#    <div class="header-top bg-white-f1 sm-text-center">#}
+{#      <div class="container">#}
+{#        <div class="row">#}
+{#          <div class="col-md-6">#}
+{#            <div class="widget no-border m-5">#}
+{#              <i class="fa fa-clock-o text-theme-colored"></i> contact  24 Hrs#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="col-md-6">#}
+{#            <div class="widget no-border m-0">#}
+{#              <ul class="list-inline pull-right flip sm-pull-none sm-text-center mt-5">#}
+{#                <li> <i class="fa fa-phone text-theme-colored"></i> Connect as <a href="#">+91 9121 201 260</a> </li>#}
+{#                <li> <i class="fa fa-envelope-o text-theme-colored"></i> <a href="#">innovatorsraikal@gmail.com</a> </li>#}
+{#              </ul>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="header-nav">#}
+{#      <div class="header-nav-wrapper navbar-scrolltofixed bg-white">#}
+{#        <div class="container">#}
+{#          <nav id="menuzord-right" class="menuzord blue no-bg"><a class="logo menuzord-brand pull-left flip xs-pull-center mb-15" href="index-mp-layout1.html"><img src="images/logo.png" alt=""></a>#}
+{#            <ul class="menuzord-menu">#}
+{#              <li class=""><a href="#home">Home</a></li>#}
+{#              <li><a href="About.html">About</a></li>#}
+{#              #}
+{#              <li><a href="department.html">Team</a></li>#}
+{#              <!--<li><a href="#team">Team</a></li>-->#}
+{#              <li><a href="gallary.html">Gallery</a></li>#}
+{#              <!--<li><a href="wh.html">Why help</a></li>-->#}
+{#              <li><a href="contact.html">Contact Us</a></li>#}
+{#			  <li><a href="#service">Donate Here</a></li>#}
+{#            </ul>#}
+{#          </nav>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </header>#}
+{#  #}
+
+  <!-- Start main-content -->
+  <div class="main-content">
+    <!-- Section: home -->
+    <section id="home" class="divider parallax layer-overlay overlay-dark-3" data-bg-img="images/.jpg">
+      <div class="display-table">
+        <div class="display-table-cell">
+            <div class="row">
+            <!--  <div class="col-sm-6 col-md-4 col-md-offset-8">-->
+			
+ <div class="banner">
+     <div class="container-fluid padding">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active item1">
+      <img src="{% static 'images/blood2.png' %}" alt="..." width="100px" height="200px">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item item1">
+      <img src="{% static 'images/blood3.png' %}" alt="..." >
+      <div class="carousel-caption">
+      </div>
+    </div>
+     <div class="item item1">
+      <img src="{% static 'images/money2.jpg' %}" alt="..." >
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+   </div>
+</div>
+			  <!-- slide -->
+			  
+              <!-- end slid-->  
+         
+                <script type="text/javascript">
+                  $("#appointment_form").validate({
+                    submitHandler: function(form) {
+                      var form_btn = $(form).find('button[type="submit"]');
+                      var form_result_div = '#form-result';
+                      $(form_result_div).remove();
+                      form_btn.before('&amp;lt;div id="form-result" class="alert alert-success" role="alert" style="display: none;"&amp;gt;&amp;lt;/div&amp;gt;');
+                      var form_btn_old_msg = form_btn.html();
+                      form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                      $(form).ajaxSubmit({
+                        dataType:  'json',
+                        success: function(data) {
+                          if( data.status == 'true' ) {
+                            $(form).find('.form-control').val('');
+                          }
+                          form_btn.prop('disabled', false).html(form_btn_old_msg);
+                          $(form_result_div).html(data.message).fadeIn('slow');
+                          setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                        }
+                      });
+                    }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--Section:  About -->
+  
+    <!-- Section: Services -->
+    <section class="bg-light yimg" >
+      <div class="container pb-30">
+        <div class="section-title text-center">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+			 
+			 <br>
+              <h2 class="text-uppercase title">Why Should We Help <span class="text-black-111"> </span></h2>
+              <h5 class=" letter-space-1"><i><b>"There are so many orphan childrens are there in India.They don't get proper food and cloths to wear.
+			  The Govt has taking taking some orphans and let we take take for some childrens in a small way, which is we able to do. Stop spending money for the gods, and spend for the orphan childrens. Lets stop child labour and makes them as students.Think a second about those child only we are theire for them. please be support to us for helping via this team (RAINBOW)... "I've been making a list of the things they don't teach you at school. They don't teach you how to love somebody. They don't teach you how to be famous. They don't teach you how to be rich or how to be poor. They don't teach you how to walk away from someone you don't love any longer. They don't teach you how to know what's going on in someone else's mind. 
+			  They don't teach you what to say to someone who's dying. They don't teach you anything worth knowing".</b></i></h5>
+            </div>
+          </div>
+        </div>
+		
+		<!--
+        <div class="section-content">
+          <div class="row multi-row-clearfix">
+            <div class="col-xs-12 col-sm-7 col-md-4 col-lg-4">
+              <div class="icon-box text-center">
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i  class="fa fa-money" ></i> </a>
+                <h4 class="text-uppercase">Money Donation</h4>
+                
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-4 col-lg-4">
+              <div class="icon-box text-center"> 
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"><i class="icon-food"></i></a>
+                <h4 class="icon-box-title mt-15 mb-10 text-uppercase">Food Donation</h4>
+                
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-4 col-lg-4">
+              <div class="icon-box text-center"> 
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i  class="fa fa-heartbeat"></i> </a>
+                <h4 class="icon-box-title mt-15 mb-10 text-uppercase">Blood Donation</h4>
+               
+              </div>
+            </div>
+           
+         <!--  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="icon-box text-center"> 
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-dental-root text-white"></i> </a>
+                <h4 class="icon-box-title mt-15 mb-10 text-uppercase">Dentures</h4>
+                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="icon-box text-center"> 
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-dental-amalgam text-white"></i> </a>
+                <h4 class="icon-box-title mt-15 mb-10 text-uppercase">Pharmecy</h4>
+                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="icon-box text-center"> 
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-dental-dental-floss text-white"></i> </a>
+                <h4 class="icon-box-title mt-15 mb-10 text-uppercase">Orthodontics</h4>
+                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="icon-box text-center"> 
+                <a class="icon bg-theme-colored icon-circled icon-border-effect effect-circle icon-xl" href="#"> <i class="flaticon-dental-molar-tooth text-white"></i> </a>
+                <h4 class="icon-box-title mt-15 mb-10 text-uppercase">Pediatrics</h4>
+                <p>Eleifend lobortis bibendum volutpat est senectus duis convallis augue hendrerit senectus duis</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Department -->
+
+
+    <!-- Section: team -->
+    <section >
+      <div class="ourimgs container pb-30 pb-sm-0">
+        <div class="section-title text-center">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12" id="service" >
+              <h2 class="serv text-uppercase title">Donate<span class="text-black-111"> Here</span></h2>
+            
+            </div>
+          </div>
+        </div>
+        <div class="section-content text-center" >
+          <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-4 pb-sm-30 mb-30">
+              <div class="team-member maxwidth400 bg-white">
+                <a href="{% url 'blood' %}"><div class="thumb"><img alt="" src="{% static 'images/blood1.png' %}" class="img-fullwidth" width="100px" height="200px" border-radius="50%"></div>
+                <div class="info">
+                  <h4 class="name">Blood Donation</a></h4>
+                  <!--<h5 class="occupation text-gray">...........</h5>
+                  <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-10 mb-10">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-4 pb-sm-30 mb-30">
+              <div class="team-member maxwidth400 bg-white">
+               <a href="#"> <div class="thumb"><img alt="" src="{% static 'images/food1.jpg' %}" class="img-fullwidth" width="100px" height="200px"></div>
+                <div class="info">
+                  <h4 class="name">Food Donation</a></h4>
+                  <!--<h5 class="occupation text-gray">Anything</h5>
+                  <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-10 mb-10">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-4 pb-sm-30 mb-30">
+              <div class="team-member maxwidth400 bg-white">
+                <a href="{% url 'money' %}"><div class="thumb"><img alt="" src="{% static 'images/m1.jpg' %}" class="img-fullwidth" width="100px" height="200px"></div>
+                <div class="info">
+                  <h4 class="name">Money Donation</a></h4>
+                  <!--<h5 class="occupation text-gray">1Rs to </h5>
+                  <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-10 mb-10">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- Section: Pricing -->
+   
+
+    <section class="divider parallax layer-overlay overlay-blue" data-bg-img="{% static 'images/bg/bg1.jpg' %}">
+      <div class="container pt-0 pb-0">
+        <div class="pt-40 pb-40 pb-sm-0">
+          <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-4 mb-md-50">
+              <div class="funfact text-center"> 
+                <a href="#"> <i class="fa fa-calendar text-white font-36"></i></a>
+                <h5 class="animate-number text-white-f1 font-36" data-value="2" data-animation-duration="2500">0</h5>
+                <h6 class="title text-white-f3 font-16">since</h6>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-4 mb-md-50">
+              <div class="funfact text-center"> 
+                <a href="#"> <i class="fa fa-user text-white font-36"></i></a>
+                <h5 class="animate-number text-white-f1 font-36" data-value="1921" data-animation-duration="2500">0</h5>
+                <h6 class="title text-white-f3 font-16">We Helped</h6>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-4 mb-md-50">
+              <div class="funfact text-center"> 
+                <a href="#"> <i class="fa fa-globe text-white font-36"></i></a>
+                <h5 class="animate-number text-white-f1 font-36" data-value="25" data-animation-duration="2500">0</h5>
+                <h6 class="title text-white-f3 font-16">Telangana District</h6>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+   {% endblock %}
+
+    <!-- Section: Testimonials -->
+    
+    
+    <!-- Section: Blog -->
+   
+    
+    <!-- Divider: Contact -->
+   
+       
+            <!-- Contact Form Validation-->
+            <script type="text/javascript">
+              $("#contact_form").validate({
+                submitHandler: function(form) {
+                  var form_btn  = $(form).find('button[type="submit"]');
+                  var form_result_div = '#form-result';
+                  $(form_result_div).remove();
+                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                  var form_btn_old_msg = form_btn.html();
+                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                  $(form).ajaxSubmit({
+                    dataType:  'json',
+                    success: function(data) {
+                      if( data.status == 'true' ) {
+                        $(form).find('.form-control').val('');
+                      }
+                      form_btn.prop('disabled', false).html(form_btn_old_msg);
+                      $(form_result_div).html(data.message).fadeIn('slow');
+                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                    }
+                  });
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+  
+{#  <!-- Footer -->#}
+{#  <footer id="footer" class="bg-black-222">#}
+{#		 <div class="container">#}
+{#    <!--<div class="container pt-70 pb-30">-->#}
+{#     <div class="row row1 border-bottom-black">#}
+{#        <div class="col-sm-6 col-md-3">#}
+{#          <div class="widget dark bg">#}
+{#            <img class="mb-20" alt="" src="{% static 'images/log.png' %}">#}
+{#            <p class="text-gray">#}
+{#		  <strong><b>INNOVATORS SOCIAL WELFARE SOCIETY</b></strong>#}
+{#		  </p>#}
+{#            <ul class="list-inline mt-5">#}
+{#			#}
+{#			<li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored mr-5"></i><a class="text-gray" href="#">10-14/A,RAIKAL,JAGITYAL,Telangana</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">+91 9121 201 260</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">innovatorsraikal@gmail.com</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"> </i>  <i class="icon-map-marker"></i><a class="text-gray" href="#">www.innovators.com</a> </li>#}
+{#            </ul>#}
+{#          </div>#}
+{#        </div>#}
+{#		<div class="fimg col-md-3">#}
+{#		 <div class="widget dark bg">#}
+{#            <img class="mb-20" alt="" src="{% static 'images/log.png' %}">#}
+{#            <p class="text-gray">#}
+{#		  <strong><b>INNOVATORS SOCIAL WELFARE SOCIETY</b></strong>#}
+{#		  </p>#}
+{#            <ul class="list-inline mt-5">#}
+{#			#}
+{#			<li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored mr-5"></i><a class="text-gray" href="#">10-14/A,RAIKAL,JAGITYAL,Telangana</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">+91 9121 201 260</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">innovatorsraikal@gmail.com</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"> </i>  <i class="icon-map-marker"></i><a class="text-gray" href="#">www.innovators.com</a> </li>#}
+{#            </ul>#}
+{#          </div>#}
+{#		</div>#}
+{#		<div class="fimg col-md-3">#}
+{#		 <div class="widget dark bg">#}
+{#            <img class="mb-20" alt="" src="{% static 'images/log.png' %}">#}
+{#            <p class="text-gray">#}
+{#		  <strong><b>INNOVATORS SOCIAL WELFARE SOCIETY</b></strong>#}
+{#		  </p>#}
+{#            <ul class="list-inline mt-5">#}
+{#			#}
+{#			<li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored mr-5"></i><a class="text-gray" href="#">10-14/A,RAIKAL,JAGITYAL,Telangana</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">+91 9121 201 260</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">innovatorsraikal@gmail.com</a> </li>#}
+{#              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"> </i>  <i class="icon-map-marker"></i><a class="text-gray" href="#">www.innovators.com</a> </li>#}
+{#            </ul>#}
+{#          </div>#}
+{#		</div>#}
+{#		<div class="col-md-3">#}
+{#		 <div class="widget dark bg">#}
+{#            <img class="mb-20" alt="" src="images/log.png">#}
+{#            <p class="text-gray">#}
+{#		  <strong><b>Connect With Us</b></strong>#}
+{#		  </p>#}
+{#             <ul class="styled-icons icon-dark icon-circled icon-sm">#}
+{#              <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+{#              <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+{#              <li><a href="#"><i class="fa fa-skype"></i></a></li>#}
+{#              <li><a href="#"><i class="fa fa-youtube"></i></a></li>#}
+{#              <li><a href="#"><i class="fa fa-instagram"></i></a></li>#}
+{#              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>#}
+{#            </ul>#}
+{#          </div>#}
+{#        #}
+{#          <!-- <div class="widget dark"> -->#}
+{#            <!-- <h5 class="widget-title mb-10">Connect With Us</h5> -->#}
+{#            <!-- <ul class="styled-icons icon-dark icon-circled icon-sm"> -->#}
+{#              <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->#}
+{#              <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->#}
+{#              <!-- <li><a href="#"><i class="fa fa-skype"></i></a></li> -->#}
+{#              <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li> -->#}
+{#              <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->#}
+{#              <!-- <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->#}
+{#            <!-- </ul> -->#}
+{#          #}
+{#        <!-- </div> -->#}
+{#		</div>#}
+{#		#}
+{#       <!-- <div class="col-sm-6 col-md-3">#}
+{#          <div class="widget dark">#}
+{#            <h5 class="widget-title line-bottom">Useful Links</h5>#}
+{#            <ul class="list angle-double-right list-border">#}
+{#              <li><a href="index-mp-layout1.html">Home</a></li>#}
+{#              <li><a href="page-about1.html">About us</a></li>#}
+{#              <li><a href="shortcode-sitemap.html">Sitemap</a></li>#}
+{#              <li><a href="page-faq-style1.html">Faq's</a></li>#}
+{#              <li><a href="page-contact1.html">Contact</a></li>#}
+{#            </ul>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="col-sm-6 col-md-3">#}
+{#          <div class="widget dark">#}
+{#            <h5 class="widget-title line-bottom">Twitter Feed</h5>#}
+{#            <div class="twitter-feed list-border clearfix" data-username="Envato" data-count="2"></div>#}
+{#          </div>#}
+{#        </div>--#}
+{#        <div class="col-sm-6 col-md-3">#}
+{#          <div class="widget dark">#}
+{#            <h5 class="widget-title line-bottom">Latest News</h5>#}
+{#            <div class="latest-posts">#}
+{#              <article class="post media-post clearfix pb-0 mb-10">#}
+{#                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>#}
+{#                <div class="post-right">#}
+{#                  <h5 class="post-title mt-0 mb-5"><a href="#">Sustainable Construction</a></h5>#}
+{#                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>#}
+{#                </div>#}
+{#              </article>#}
+{#              <article class="post media-post clearfix pb-0 mb-10">#}
+{#                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>#}
+{#                <div class="post-right">#}
+{#                  <h5 class="post-title mt-0 mb-5"><a href="#">Industrial Coatings</a></h5>#}
+{#                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>#}
+{#                </div>#}
+{#              </article>#}
+{#              <article class="post media-post clearfix pb-0 mb-10">#}
+{#                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>#}
+{#                <div class="post-right">#}
+{#                  <h5 class="post-title mt-0 mb-5"><a href="#">Storefront Installations</a></h5>#}
+{#                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>#}
+{#                </div>#}
+{#              </article>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>->#}
+{#      <div class="row mt-30">#}
+{#        <div class="col-md-5">#}
+{#          <div class="widget dark">#}
+{#            <h5 class="widget-title mb-10">Subscribe Us</h5>#}
+{#            <!-- Mailchimp Subscription Form Starts Here ->#}
+{#            <form id="mailchimp-subscription-form-footer" class="newsletter-form">#}
+{#              <div class="input-group">#}
+{#                <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL-footer" >#}
+{#                <span class="input-group-btn">#}
+{#                  <button data-height="45px" class="btn btn-colored btn-theme-colored btn-xs m-0 font-14" type="submit">Subscribe</button>#}
+{#                </span>#}
+{#              </div>#}
+{#            </form>-->#}
+{#            <!-- Mailchimp Subscription Form Validation-->#}
+{#            <script type="text/javascript">#}
+{#              $('#mailchimp-subscription-form-footer').ajaxChimp({#}
+{#                  callback: mailChimpCallBack,#}
+{#                  url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'#}
+{#              });#}
+{##}
+{#              function mailChimpCallBack(resp) {#}
+{#                  // Hide any previous response text#}
+{#                  var $mailchimpform = $('#mailchimp-subscription-form-footer'),#}
+{#                      $response = '';#}
+{#                  $mailchimpform.children(".alert").remove();#}
+{#                  console.log(resp);#}
+{#                  if (resp.result === 'success') {#}
+{#                      $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';#}
+{#                  } else if (resp.result === 'error') {#}
+{#                      $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';#}
+{#                  }#}
+{#                  $mailchimpform.prepend($response);#}
+{#              }#}
+{#            </script>#}
+{#            <!-- Mailchimp Subscription Form Ends Here -->#}
+{#          </div>#}
+{#        </div>#}
+{#       #}
+{#       #}
+{#      </div>#}
+{#    </div>#}
+{#   </div>#}
+{#        #}
+{#  </footer>#}
+{#  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>#}
+{#</div>#}
+{#<!-- end wrapper -->#}
+{##}
+{#<!-- Footer Scripts -->#}
+{#<script src="{% static 'js/custom.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.actions.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.carousel.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.migration.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.navigation.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.parallax.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/revolution-slider/js/extensions/revolution.extension.video.min.js' %}"></script>#}
+{##}
+{#</body>#}
+{#</html>#}

@@ -1,0 +1,144 @@
+<html>
+<!--<head>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+	<style>
+		<!--body  {margin-top:20px; }
+		.panel-title {display: inline;font-weight: bold;}
+		.checkbox.pull-right { margin: 0; }
+		.pl-ziro { padding-left: 0px; }
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+		
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <input type="checkbox" />
+                            Remember
+                        </label>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                    <div class="form-group">
+                        <label for="cardNumber">
+                            CARD NUMBER</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                required autofocus />
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-7 col-md-7">
+                            <div class="form-group">
+                                <label for="expityMonth">
+                                    EXPIRY DATE</label>
+                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                </div>
+                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-md-5 pull-right">
+                            <div class="form-group">
+                                <label for="cvCode">
+                                    CV CODE</label>
+                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                            </div>
+                        </div>
+                    </div>
+					<div class="input-group">
+					<input type="text" class="form-control" id="amount" placeholder="enter amount"
+						required autofocus />
+					<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+				</div>
+                    </form>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <!-- <li class="active"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
+                </li> -->
+           <!-- </ul>
+            <br/>
+            <a href="#" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+	
+        </div>
+    </div>
+</div>-->
+<div id="card-success" class="hidden">
+  <i class="fa fa-check"></i>
+  <p>Payment Successful!</p>
+</div>
+<div id="form-errors" class="hidden">
+  <i class="fa fa-exclamation-triangle"></i>
+  <p id="card-error">Card error</p>
+</div>
+<div id="form-container">
+
+  <div id="card-front">
+    <div id="shadow"></div>
+    <div id="image-container">
+      <span id="amount">paying: <strong>$99</strong></span>
+      <span id="card-image">
+      
+        </span>
+    </div>
+    <!--- end card image container --->
+
+    <label for="card-number">
+        Card Number
+      </label>
+    <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+    <div id="cardholder-container">
+      <label for="card-holder">Card Holder
+      </label>
+      <input type="text" id="card-holder" placeholder="e.g. John Doe" />
+    </div>
+    <!--- end card holder container --->
+    <div id="exp-container">
+      <label for="card-exp">
+          Expiration
+        </label>
+      <input id="card-month" type="text" placeholder="MM" length="2">
+      <input id="card-year" type="text" placeholder="YY" length="2">
+    </div>
+        <div id="cvc-container">
+      <label for="card-cvc"> CVC/CVV</label>
+      <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+      <p>Last 3 or 4 digits</p>
+    </div>
+    <!--- end CVC container --->
+    <!--- end exp container --->
+  </div>
+  <!--- end card front --->
+  <div id="card-back">
+    <div id="card-stripe">
+    </div>
+
+  </div>
+  <!--- end card back --->
+  <input type="text" id="card-token" />
+  <button type="button" id="card-btn">Submit</button>
+
+</div>
+<!--- end form container --->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="https://use.fontawesome.com/f1e0bf0cbc.js"></script>
+
+
+</body>
+</html>

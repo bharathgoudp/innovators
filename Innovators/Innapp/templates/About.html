@@ -1,0 +1,338 @@
+{% extends 'headerandfooter.html' %}
+{% load staticfiles %}
+{% block content %}
+  <!-- slide quotes -->
+  <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="images/about.jpg"  data-parallax-ratio="0.7">
+      <div class="container pb-50">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+            <div class="testimonial style2 owl-carousel-1col" data-dots="true">
+              <div class="item">
+                <div class="testimonial-wrapper text-center">
+                  <div class="thumb"></div>
+                  <div class="content p-10">
+                    <p class="lead text-white">“The Blood You Donate Gives Someone Another Chance At Life. One Day That Someone May Be A Close Relative, A Friend, A Loved One—Or Even You.”</p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-wrapper text-center">
+                  <div class="thumb"></div>
+                  <div class="content p-10">
+                    <p class="lead text-white">“Since you get more joy out of giving joy to others, you should put a good deal of thought into the happiness that you are able to give.”</p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-wrapper text-center">
+                  <div class="thumb"></div>
+                  <div class="content p-10">
+                    <p class="lead text-white">When you share your last crust of bread with a beggar, you mustn’t behave as if you were throwing a bone to a dog. You must give humbly, and thank him for allowing you to have a part in his hunger.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- slide end -->  
+  
+  
+  
+  
+   <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- end wrapper -->
+  <section id="about">
+      <div class="container pb-0">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-4">
+             
+              <!-- <div class="opening-hours text-left">
+                  <ul class="list-unstyled">
+                    <li class="clearfix line-height-1"> <span> Tuesday - Friday </span>
+                      <div class="value"> 9.00 - 20.00 </div>
+                    </li>
+                    <li class="clearfix line-height-1"> <span> Saturday </span>
+                      <div class="value"> 10.00 - 16.00 </div>
+                    </li>
+                    <li class="clearfix line-height-1"> <span> Sunday </span>
+                      <div class="value"> 9.30 - 18.00 </div>
+                    </li>
+                    <li class="clearfix line-height-1"> <span> Monday </span>
+                      <div class="value"> 9.00 - 18.00 </div>-->
+                  <!--  </li>
+                  </ul>
+                </div>
+                <h5 class="mt-30"><i class="fa fa-pencil-square-o text-theme-colored"></i> Need Help?</h5>
+                <p class="mt-0 text-uppercase">Just make an appointment to get help from our experts</p>
+                <a href="#" class="btn btn-dark btn-theme-colored mt-15" data-toggle="modal" data-target="#modal_appontment_form_at_about">Request an appointment</a>
+
+                <!-- Modal - Appontment Form Starts -->
+                <div class="modal fade" id="modal_appontment_form_at_about" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="border-1px p-25">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="text-theme-colored text-uppercase m-0">Make an Appointment</h4>
+                        <div class="line-bottom mb-30"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        <!-- Appointment Form -->
+                        <form novalidate="novalidate" id="appointment_form_at_home" name="appointment_form_at_home" class="" method="post" action="http://html.kodesolution.live/f/dental-plus/v3/demo/includes/appointment.php">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="form-group mb-10">
+                                <input type="text" name="form_name" class="form-control" required="" placeholder="Enter Name" aria-required="true">
+                              </div>
+                            </div>
+                            <div class="col-sm-12">
+                              <div class="form-group mb-10">
+                                <input type="email" name="form_email" class="form-control required email" placeholder="Enter Email" aria-required="true">
+                              </div>
+                            </div>
+                            <div class="col-sm-12">
+                              <div class="form-group mb-10">
+                                <input type="text" name="form_appontment_date" class="form-control required datetime-picker" placeholder="Appoinment Date &amp; Time" aria-required="true">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group mb-10">
+                            <textarea name="form_message" class="form-control required" placeholder="Enter Message" rows="5" aria-required="true"></textarea>
+                          </div>
+                          <div class="form-group mb-0 mt-20">
+                            <input type="hidden" name="form_botcheck" class="form-control" value="">
+                            <button type="submit" class="btn btn-dark btn-theme-colored" data-loading-text="Please wait...">Send Message</button>
+                          </div>
+                        </form>
+
+                        <!-- Appointment Form Validation-->
+                        <script type="text/javascript">
+                          $("#appointment_form_at_home").validate({
+                            submitHandler: function(form) {
+                              var form_btn = $(form).find('button[type="submit"]');
+                              var form_result_div = '#form-result';
+                              $(form_result_div).remove();
+                              form_btn.before('&amp;lt;div id="form-result" class="alert alert-success" role="alert" style="display: none;"&amp;gt;&amp;lt;/div&amp;gt;');
+                              var form_btn_old_msg = form_btn.html();
+                              form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                              $(form).ajaxSubmit({
+                                dataType:  'json',
+                                success: function(data) {
+                                  if( data.status == 'true' ) {
+                                    $(form).find('.form-control').val('');
+                                  }
+                                  form_btn.prop('disabled', false).html(form_btn_old_msg);
+                                  $(form_result_div).html(data.message).fadeIn('slow');
+                                  setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                                }
+                              });
+                            }
+                          });
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal - Appontment Form Ends -->
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7">
+              <h2 class="mt-0 text-black-333 line-height-1 line-bottom"><span class="font-weight-500">Welcome to </span> <span class="text-theme-colored font-weight-400">Innovators</span></h2>
+              <p>INNOVATORS is a not-for-profit organisation working in Telangana for over 2 years, focusing on alleviating poverty and 
+social injustice. We do this through well planned and comprehensive projects in health, education, 
+livelihoods and disaster preparedness and response. Our overall goal is the empowerment of 
+women and girls from poor and marginalised communities leading to improvement in their lives and livelihoods.</p>
+              <div class="row sm-text-center">
+                <div class="col-xs-12 col-sm-7 col-md-7">
+				<h2 class="mt-0 text-black-333 line-height-1 line-bottom"><span class="font-weight-500">People behand </span><span class="text-theme-colored font-weight-400">Smile</span></h2>
+				<p>A group of batch from School mates have started the Innovators Social Welfare Society from Raikal .
+Theire intention is to help tghe needy people (women & Children) by keeping the all the hands together 
+to give the smile on theire face.Inoovators organization is increasing the Volounteers day by day to see more smiles.</p>
+				</div>
+              </div>
+            </div>
+            <div class="aboutphoto col-sm-12 col-md-5">
+              <img class="img-fullwidth" src="images/child1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-black-222">
+		 <div class="container">
+    <!--<div class="container pt-70 pb-30">-->
+     <div class="row row1 border-bottom-black">
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark bg">
+            <img class="mb-20" alt="" src="images/log.png">
+            <p class="text-gray">
+		  <strong><b>INNOVATORS SOCIAL WELFARE SOCIETY</b></strong>
+		  </p>
+            <ul class="list-inline mt-5">
+			
+			<li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored mr-5"></i><a class="text-gray" href="#">10-14/A,RAIKAL,JAGITYAL,Telangana</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">+91 9121 201 260</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">innovatorsraikal@gmail.com</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"> </i>  <i class="icon-map-marker"></i><a class="text-gray" href="#">www.innovators.com</a> </li>
+            </ul>
+          </div>
+        </div>
+		<div class="fimg col-md-3">
+		 <div class="widget dark bg">
+            <img class="mb-20" alt="" src="images/log.png">
+            <p class="text-gray">
+		  <strong><b>INNOVATORS SOCIAL WELFARE SOCIETY</b></strong>
+		  </p>
+            <ul class="list-inline mt-5">
+			
+			<li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored mr-5"></i><a class="text-gray" href="#">10-14/A,RAIKAL,JAGITYAL,Telangana</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">+91 9121 201 260</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">innovatorsraikal@gmail.com</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"> </i>  <i class="icon-map-marker"></i><a class="text-gray" href="#">www.innovators.com</a> </li>
+            </ul>
+          </div>
+		</div>
+		<div class="fimg col-md-3">
+		 <div class="widget dark bg">
+            <img class="mb-20" alt="" src="images/log.png">
+            <p class="text-gray">
+		  <strong><b>INNOVATORS SOCIAL WELFARE SOCIETY</b></strong>
+		  </p>
+            <ul class="list-inline mt-5">
+			
+			<li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored mr-5"></i><a class="text-gray" href="#">10-14/A,RAIKAL,JAGITYAL,Telangana</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">+91 9121 201 260</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">innovatorsraikal@gmail.com</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"> </i>  <i class="icon-map-marker"></i><a class="text-gray" href="#">www.innovators.com</a> </li>
+            </ul>
+          </div>
+		</div>
+		<div class="col-md-3">
+		 <div class="widget dark bg">
+            <img class="mb-20" alt="" src="images/log.png">
+            <p class="text-gray">
+		  <strong><b>Connect With Us</b></strong>
+		  </p>
+             <ul class="styled-icons icon-dark icon-circled icon-sm">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+        
+          <!-- <div class="widget dark"> -->
+            <!-- <h5 class="widget-title mb-10">Connect With Us</h5> -->
+            <!-- <ul class="styled-icons icon-dark icon-circled icon-sm"> -->
+              <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+              <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+              <!-- <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
+              <!-- <li><a href="#"><i class="fa fa-youtube"></i></a></li> -->
+              <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+              <!-- <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
+            <!-- </ul> -->
+          
+        <!-- </div> -->
+		</div>
+		
+       <!-- <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Useful Links</h5>
+            <ul class="list angle-double-right list-border">
+              <li><a href="index-mp-layout1.html">Home</a></li>
+              <li><a href="page-about1.html">About us</a></li>
+              <li><a href="shortcode-sitemap.html">Sitemap</a></li>
+              <li><a href="page-faq-style1.html">Faq's</a></li>
+              <li><a href="page-contact1.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Twitter Feed</h5>
+            <div class="twitter-feed list-border clearfix" data-username="Envato" data-count="2"></div>
+          </div>
+        </div>--
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Latest News</h5>
+            <div class="latest-posts">
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">Sustainable Construction</a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">Industrial Coatings</a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0 mb-5"><a href="#">Storefront Installations</a></h5>
+                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>->
+      <div class="row mt-30">
+        <div class="col-md-5">
+          <div class="widget dark">
+            <h5 class="widget-title mb-10">Subscribe Us</h5>
+            <!-- Mailchimp Subscription Form Starts Here ->
+            <form id="mailchimp-subscription-form-footer" class="newsletter-form">
+              <div class="input-group">
+                <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL-footer" >
+                <span class="input-group-btn">
+                  <button data-height="45px" class="btn btn-colored btn-theme-colored btn-xs m-0 font-14" type="submit">Subscribe</button>
+                </span>
+              </div>
+            </form>-->
+            <!-- Mailchimp Subscription Form Validation-->
+            <script type="text/javascript">
+              $('#mailchimp-subscription-form-footer').ajaxChimp({
+                  callback: mailChimpCallBack,
+                  url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
+              });
+
+              function mailChimpCallBack(resp) {
+                  // Hide any previous response text
+                  var $mailchimpform = $('#mailchimp-subscription-form-footer'),
+                      $response = '';
+                  $mailchimpform.children(".alert").remove();
+                  console.log(resp);
+                  if (resp.result === 'success') {
+                      $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                  } else if (resp.result === 'error') {
+                      $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                  }
+                  $mailchimpform.prepend($response);
+              }
+            </script>
+            <!-- Mailchimp Subscription Form Ends Here -->
+          </div>
+        </div>
+       
+       
+      </div>
+    </div>
+   </div>
+     {% endblock %}   
+  
