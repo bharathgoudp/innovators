@@ -16,14 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Innapp import views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
-    path('about/',views.about,name='about'),
-    path('team/',views.team,name='team'),
-    path('blooddonation/',views.blood,name='blood'),
-    path('moneydonation/',views.money,name='money'),
-    path('gallery/',views.gallery,name='gallery'),
-    path('contact/',views.contact,name='contact'),
-    path('payment/',views.payment,name='payment'),
-]
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('team/', views.team, name='team'),
+    path('blooddonation/', views.blood, name='blood'),
+    path('moneydonation/', views.money, name='money'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('contact/', views.contact, name='contact'),
+    path('payment/', views.payment, name='payment'),
+    path('president/', views.president, name='president'),
+    path('secretary/', views.secretary, name='secretary'),
+    path('member/', views.member, name='member'),
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

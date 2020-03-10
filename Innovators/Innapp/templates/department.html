@@ -15,7 +15,7 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="vertical-tab">
               <ul class="nav nav-tabs">
-                <li class="active"><a class="asdf" href="#tab16" data-toggle="tab">President & Vice President  </a></li>
+                <li class="active"><a class="asdf" href="{% url 'president' %}" data-toggle="tab">President & Vice President  </a></li>
                 <li><a class="asdf" href="#tab17" data-toggle="tab">Secretary</a></li>
                 <!--<li><a class="asdf" href="#tab18" data-toggle="tab">Members</a></li>-->
                 <li><a class="asdf" href="#tab19" data-toggle="tab">Members</a></li>
@@ -26,38 +26,28 @@
             <div class="tab-content bg-white">
               <div class="tab-pane fade in active" id="tab16">
                 <div class="row">
+{% for x in pres %}
                   <div class="col-sm-4 col-md-5">
                     <div class="thumb">
                       <img class="img-fullwidth" src="{% static 'images/team/test.jpg' %}" alt="">
                     </div>
                     <div>
-                      <h4 class="mb-5">Bharath</h4>
+                      <h4 class="mb-5">{{x.pname}}</h4>
                       <ul class="list-inline mt-5">
 			
-			<li class="m-0 pl-10 pr-10"> Phone  : +91 9121 201 260 </a> </li>
-              <li class="m-0 pl-10 pr-10"></a>Address : RAIKAL,JAGITYAL,Telangana </li>
-              <li class="m-0 pl-10 pr-10"> email  : innovatorsraikal@gmail.com</a> </li>
+			<li class="m-0 pl-10 pr-10"> Phone  : +91{{x.mblno}} </a> </li>
+              <li class="m-0 pl-10 pr-10"></a>Address : {{x.paddress}}</li>
+              <li class="m-0 pl-10 pr-10"> email  : {{x.pemail}}</a> </li>
               
             </ul> 
-                      
+
                     </div>
                   </div>
 				  <br>
-                 
-                  <div class="col-sm-4 col-md-5">
-                    <div class="thumb">
-                      <img class="img-fullwidth" src="{% static 'images/team/test.jpg' %}" alt="">
-                    </div>
-                    <div>
-                      <h4 class="mb-5">Bharath</h4>
-                      <ul class="list-inline mt-5">
-			
-			<li class="m-0 pl-10 pr-10"> Phone  : +91 9121 201 260 </a> </li>
-              <li class="m-0 pl-10 pr-10"></a>Address : RAIKAL,JAGITYAL,Telangana </li>
-              <li class="m-0 pl-10 pr-10"> email  : innovatorsraikal@gmail.com</a> </li>
-              
-            </ul> 
-                      
+{% endfor %}
+
+
+
                     </div>
                   </div>
                 </div>
