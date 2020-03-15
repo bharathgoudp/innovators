@@ -168,7 +168,8 @@
   <!--form-->
    <div class="container">
 
-    <form class="pp well form-horizontal" action=" " m	ethod="post"  id="contact_form">
+    <form class="pp well form-horizontal" action="{% url 'bloodsave' %}" method="post"  id="contact_form">
+    {% csrf_token %}
 	<div class="fs">
 <fieldset>
 
@@ -182,7 +183,7 @@
   <div class=" inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="@inoveter" class="fm form-control"  type="text">
+  <input  name="name" placeholder="@inoveter" class="fm form-control"  type="text">
     </div>
   </div>
 </div>
@@ -195,27 +196,21 @@
     <div class="selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="department" class="fm form-control selectpicker">
+    <select name="group" class="fm form-control selectpicker">
      <option data-display="Experience">Blood groups</option>
-											<option value="1">B+ ve</option>
-											<option value="2">B- ve</option>
-											<option value="3" >A+ ve</option>
-											<option value="4">A ve</option>
-											<option value="4">AB+ ve</option>
-											<option value="4">AB- ve</option>
-											<option value="4">O+ ve</option>
-											<option value="4">O- ve</option>
+											<option value="B+ ve">B+ ve</option>
+											<option value="B- ve">B- ve</option>
+											<option value="A+ ve" >A+ ve</option>
+											<option value="A ve">A ve</option>
+											<option value="AB+ ve">AB+ ve</option>
+											<option value="AB- ve">AB- ve</option>
+											<option value="O+ ve">O+ ve</option>
+											<option value="O- ve">O- ve</option>
     </select>
   </div>
 </div>
 </div>
   
-<!-- Text input-->
-
-
-
-<!-- Text input-->
-
 
 
 <!-- Text input-->
@@ -237,7 +232,7 @@
     <div class=" inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="contact_no" placeholder="(+91)" class="fm form-control" type="text" required width="30px">
+  <input name="contact" placeholder="(+91)" class="fm form-control" type="text" required width="30px">
     </div>
   </div>
 </div>
@@ -246,7 +241,7 @@
   <div class=" inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
- <textarea rows="4" cols="80" name="comment"  class="fmad" placeholder=" Address" form="usrform"></textarea>
+ <input name="address" placeholder="Address" class="fm form-control" type="text" required width="30px">
     </div>
   </div>
 </div>
@@ -308,8 +303,10 @@
 						
 						<div class="job-verticle-list">
 							<div class="vertical-job-card">
+              {% for x in y %}
 								<div class="vertical-job-body">
 									<div class="row">
+                  
 										<div class="col-md-12 col-sm-12">
                                             
 											<ul class="can-skils cm_logo_emploer_mian">
@@ -318,26 +315,25 @@
                                                 
                                                     
                                                 </div>
+                                                
 												<li>
-                                                    <h5>Firstname Lastname</h5>
-                                                    <p>Email: test@gmail.com</p>
-                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Phone : +91 99999999999
+                                                    <h5>{{ x.name }}</h5>
+                                                    <p>Email: {{ x.email }}</p>
+                                                    <span class="no_margin_left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Phone : +91 {{ x.contact }}
                                                     </span><br>
-                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>Blood Group: A+</span><br>
+                                                    <span><i class="fa fa-briefcase" aria-hidden="true"></i>Blood Group: {{ x.group }}</span><br>
                                                     
                                                 
-                                                    <span><i class="fa fa-inr" aria-hidden="true"></i>Address: Jagityal</span><br>
+                                                    <span><i class="fa fa-inr" aria-hidden="true"></i>Address: {{ x.address }}</span><br>
                                                 </li>
+												                           
 												
-												
-											</ul>
-                                            
-                                            
-                                           
+											</ul>                    
 										</div>
+                    
 									</div>
 								</div>
-								
+                {% endfor %}
 							</div>
 						</div>
 					

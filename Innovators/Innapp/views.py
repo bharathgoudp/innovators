@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Bloodonate
+from .models import Bloodonate,President,VicePres,Secretory,Members,All,Bloodimg,Moneyimg,Foodimg
 
 # Create your views here.
 def index(request):
@@ -9,9 +10,14 @@ def about(request):
 def team(request):
     return render(request,'department.html')   
 def blood(request):
-    return render(request,'blooddonation.html')
+    data = Bloodonate.objects.all()
+    return render(request,'blooddonation.html',{'y':data})
 def gallery(request):
-    return render(request,'gallary.html')
+    monimg = Moneyimg.objects.all()
+    allimg = All.objects.all()
+    bloodimg = Bloodimg.objects.all()
+    foodimg = Foodimg.objects.all()
+    return render(request,'gallary.html',{'mimg':monimg,'aimg':allimg,'bimg':bloodimg,'fimg':foodimg})
 def money(request):
     return render(request,'Moneydonation1.html')
 def payment(request):
@@ -29,4 +35,5 @@ def bloodsave(request):
     address = request.POST.get('address')
     blood = Bloodonate(name=name,group=group,email=email,contact=contact,address=address)
     blood.save()
+    return render(request,'blooddonation.html')
 
