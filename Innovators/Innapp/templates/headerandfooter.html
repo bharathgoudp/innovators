@@ -79,7 +79,7 @@
     <div class="header-nav">
       <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
         <div class="container">
-          <nav id="menuzord-right" class="menuzord blue no-bg"><a class="logo menuzord-brand pull-left flip xs-pull-center mb-15" href="index-mp-layout1.html"><img src="images/logo.png" alt=""></a>
+          <nav id="menuzord-right" class="menuzord blue no-bg"><a class="logo menuzord-brand pull-left flip xs-pull-center mb-15" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
             <ul class="menuzord-menu">
               <li class=""><a href="{% url 'index' %}">Home</a></li>
               <li><a href="{% url 'about' %}">About</a></li>

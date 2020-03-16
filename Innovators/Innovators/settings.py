@@ -25,7 +25,7 @@ SECRET_KEY = '!jj5n6whmb6kft(_m0-@@1^o_n1cieo&#a&#hgt8gs=8^#b0me'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.233.107.239']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Innapp',
 ]
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
