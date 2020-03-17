@@ -29,4 +29,5 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('payment/',views.payment,name='payment'),
     path('saved/',views.bloodsave,name='bloodsave'),
+    path('autodeploy', views.autodeploy, name='autodeploy'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

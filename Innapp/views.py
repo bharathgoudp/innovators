@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Bloodonate
 from .models import Bloodonate,President,VicePres,Secretory,Members,All,Bloodimg,Moneyimg,Foodimg
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -37,3 +38,15 @@ def bloodsave(request):
     blood.save()
     return render(request,'blooddonation.html')
 
+def autodeploy(request):
+    import subprocess
+    success = True
+    try:
+        process = subprocess.call('/home/ubuntu/autodeploy.sh')
+    except:
+        process = ''
+        success = False
+    return JsonResponse({
+        'success' : success,
+        'data' : "deployment status:{}".format(process)
+        })
