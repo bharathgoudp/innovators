@@ -36,6 +36,15 @@ class Secretory(models.Model):
     def __str__(self):
         return self.name 
 
+class Jointsecretory(models.Model):
+    name = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='jointsecretory')
+    phone = models.IntegerField()
+    Address = models.CharField(max_length=20)
+    email = models.EmailField()
+    def __str__(self):
+        return self.name
+
 class Members(models.Model):
     name = models.CharField(max_length=20)
     image = models.ImageField(upload_to = 'members')

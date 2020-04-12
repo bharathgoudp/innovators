@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Bloodonate
-from .models import Bloodonate,President,VicePres,Secretory,Members,All,Bloodimg,Moneyimg,Foodimg
+from .models import Bloodonate,President,VicePres,Secretory,Jointsecretory,Members,All,Bloodimg,Moneyimg,Foodimg
 from django.http import JsonResponse
 
 # Create your views here.
@@ -9,9 +9,20 @@ def index(request):
 def about(request):
     return render(request,'About.html')
 def team(request):
-    return render(request,'department.html')   
+    deptdata = President.objects.all()
+    vicepres = VicePres.objects.all()
+    secre = Secretory.objects.all()
+    jointsecre = Jointsecretory.objects.all()
+    members = Members.objects.all()
+    return render(request,'department.html',{'dep':deptdata,'vp':vicepres,'secretary':secre,'joint':jointsecre,'members':members})   
 def blood(request):
     data = Bloodonate.objects.all()
+    blod = request.POST.get("blod")
+    addres = request.POST.get("address")
+    if blod:
+        data=data.filter(group=blod)
+    if addres:
+        data=data.filter(address=addres)
     return render(request,'blooddonation.html',{'y':data})
 def gallery(request):
     monimg = Moneyimg.objects.all()
