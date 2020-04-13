@@ -24,6 +24,7 @@ urlpatterns = [
     path('about/',views.about,name='about'),
     path('team/',views.team,name='team'),
     path('blooddonation/',views.blood,name='blood'),
+    path('donorlist/',views.donorlist,name='donorlist'),
     path('moneydonation/',views.money,name='money'),
     path('gallery/',views.gallery,name='gallery'),
     path('contact/',views.contact,name='contact'),

@@ -115,12 +115,13 @@
                             <section class="list_jobs">
 			<div class="container">
 			<!--search -->
-			<form>
+			<form action= "{% url 'donorlist' %}" method="post">
+      {% csrf_token %}
 						<fieldset class="home-form-1 icon-field" >
                                 <div class="col-md-2 col-sm-2 padd-0">
                                     <div class="form-group">
                                         <div class="icon-addon addon-lg">
-                                            <input type="text" name="address" class="form-control br-1" placeholder="Address......." />
+                                            <input type="text" name="address" class="form-control br-1" placeholder="Village,District" />
 
                                         </div>
                                     </div>
@@ -129,15 +130,15 @@
 								<div class="form-group">
 									<div>
 										<select class="wide form-control" name="blod">
-											<option data-display="Experience">Blood groups</option>
-											<option value="1">B+ ve</option>
-											<option value="2">B- ve</option>
-											<option value="3" >A+ ve</option>
-											<option value="4">A ve</option>
-											<option value="4">AB+ ve</option>
-											<option value="4">AB- ve</option>
-											<option value="4">O+ ve</option>
-											<option value="4">O- ve</option>
+											<option data-display="blood group"></option>
+											<option value="B+ ve">B+ ve</option>
+											<option value="B- ve">B- ve</option>
+											<option value="A+ ve" >A+ ve</option>
+											<option value="A- ve">A- ve</option>
+											<option value="AB+ ve">AB+ ve</option>
+											<option value="AB- ve">AB- ve</option>
+											<option value="O+ ve">O+ ve</option>
+											<option value="O- ve">O- ve</option>
 											
 										</select>
 										
@@ -146,18 +147,18 @@
 							</div>
 								
 							<div class="col-md-2 col-sm-2 padd-0">
-								<button type="submit" class="btn theme-btn cl-white seub-btn">Search It</button>
+								<input  type="submit" value="Search" class="btn theme-btn cl-white seub-btn">
 							</div>
 							
 								
 								<!--popup-->
-								
+								</fieldset>
+</form>
 								
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
  Donate Here!
 </button>
-</fieldset>
-</form>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -201,7 +202,7 @@
 											<option value="B+ ve">B+ ve</option>
 											<option value="B- ve">B- ve</option>
 											<option value="A+ ve" >A+ ve</option>
-											<option value="A ve">A ve</option>
+											<option value="A- ve">A- ve</option>
 											<option value="AB+ ve">AB+ ve</option>
 											<option value="AB- ve">AB- ve</option>
 											<option value="O+ ve">O+ ve</option>
@@ -278,7 +279,7 @@
 			</section>		
 			<!--end-->
                 
-                <div class="row">
+                {% comment %} <div class="row">
 							<div class="col-sm-7 col-md-6">
 								<strong>Doners list</strong>
 							</div>
@@ -355,7 +356,7 @@
 		
                         </div>
                     </div>
-            </div>
+            </div> {% endcomment %}
 				<!-- End Row -->
 				
 			

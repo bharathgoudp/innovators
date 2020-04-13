@@ -16,14 +16,22 @@ def team(request):
     members = Members.objects.all()
     return render(request,'department.html',{'dep':deptdata,'vp':vicepres,'secretary':secre,'joint':jointsecre,'members':members})   
 def blood(request):
-    data = Bloodonate.objects.all()
+    # data = Bloodonate.objects.all()
+    
+    return render(request,'blooddonation.html')
+
+def donorlist(request):
+    bas = Bloodonate.objects.all()
     blod = request.POST.get("blod")
     addres = request.POST.get("address")
     if blod:
-        data=data.filter(group=blod)
+        bas=bas.filter(group=blod)
     if addres:
-        data=data.filter(address=addres)
-    return render(request,'blooddonation.html',{'y':data})
+        bas=bas.filter(address=addres)
+    return render(request,'donorslist.html',{'klm':bas})
+
+
+
 def gallery(request):
     monimg = Moneyimg.objects.all()
     allimg = All.objects.all()
