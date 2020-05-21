@@ -449,4 +449,35 @@ padding:0%
 
 }
 
+.fmgrp{
+    margin-left: 131px !important;
+}
+
+.submt-btn{
+    left:48px;
+}
+.ftr{
+    padding: 57px;
+}
+
+.donate-btn{
+    position: relative;
+    left: 56%;
+    bottom: 107px;
+}
+input.btn.theme-btn.cl-white.seub-btn {
+    height: 35px;
+    width: 77%;
+        background: #ff6347b5;
+}
+.dnimg{
+width: 12%;
+    position: relative;
+    left: 72%;
+    bottom: 70px;
+}
+.dnttxt{
+    margin-top: -10%;
+    margin-left: 13px;
+}
 

@@ -155,10 +155,14 @@
 								</fieldset>
 </form>
 								
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+								<button type="button" class="btn btn-primary donate-btn" data-toggle="modal" data-target="#exampleModal">
  Donate Here!
 </button>
+ <img class="dnimg" src="{% static 'images/bloodbkimg.png' %}" alt="">
 
+                <div class="dnttxt" >
+                    <h2 style="color:#e66c40"> Please search here !</h2>
+                </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -169,7 +173,7 @@
   <!--form-->
    <div class="container">
 
-    <form class="pp well form-horizontal" action="{% url 'bloodsave' %}" method="post"  id="contact_form">
+    <form class="pp form-horizontal" action="{% url 'bloodsave' %}" method="post"  id="contact_form">
     {% csrf_token %}
 	<div class="fs">
 <fieldset>
@@ -179,7 +183,7 @@
 
 <!-- Text input-->
 
-<div class="form-group">
+<div class="form-group fmgrp">
   <label class=" control-label"> Name</label>  
   <div class=" inputGroupContainer">
   <div class="input-group">
@@ -192,7 +196,7 @@
 <!-- Text input-->
 
 
-  <div class="form-group"> 
+  <div class="form-group fmgrp">
   <label class="control-label">Select Group</label>
     <div class="selectContainer">
     <div class="input-group">
@@ -215,7 +219,7 @@
 
 
 <!-- Text input-->
-       <div class="form-group">
+       <div class="form-group fmgrp">
   <label class=" control-label">E-Mail</label>  
     <div class="inputGroupContainer">
     <div class="input-group">
@@ -228,7 +232,7 @@
 
 <!-- Text input-->
        
-<div class="form-group">
+<div class="form-group fmgrp">
  <label class=" control-label">Contact No.</label>  
     <div class=" inputGroupContainer">
     <div class="input-group">
@@ -237,7 +241,7 @@
     </div>
   </div>
 </div>
-<div class="form-group">
+<div class="form-group fmgrp">
   <label class=" control-label">Address</label>  
   <div class=" inputGroupContainer">
   <div class="input-group">
@@ -256,7 +260,7 @@
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-3 control-label"></label>
-  <div class="col-md-3"><br>
+  <div class="col-md-3 submt-btn"><br>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" data-target="#popup" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
   </div>
   <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
