@@ -1,7 +1,7 @@
 .logo img {
     max-height: 62px !important;
-    width: 150px;
-    margin-top: 10px;
+    width: 155px;
+    margin-top: -2px;
 }
 .cauro{
 	height:310px !important;
@@ -480,4 +480,6 @@ width: 12%;
     margin-top: -10%;
     margin-left: 13px;
 }
-
+.footerlogo{
+  width: 15rem;
+}

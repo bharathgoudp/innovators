@@ -57,7 +57,7 @@
 
   <!-- Header -->
   <header id="header" class="header">
-    <div class="header-top bg-white-f1 sm-text-center">
+    <!-- <div class="header-top bg-white-f1 sm-text-center">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -75,9 +75,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="header-nav">
-      <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
+      <div class="header-nav-wrapper navbar-scrolltofixed">
         <div class="container">
           <nav id="menuzord-right" class="menuzord blue no-bg"><a class="logo menuzord-brand pull-left flip xs-pull-center mb-15" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
             <ul class="menuzord-menu">
@@ -89,7 +89,7 @@
               <li><a href="{% url 'gallery' %}">Gallery</a></li>
               <!--<li><a href="wh.html">Why help</a></li>-->
               <li><a href="{% url 'contact' %}">Contact Us</a></li>
-			        <li><a href="#service">Donate Here</a></li>
+			        <li><a href="{% url 'donate' %}">Donate Here</a></li>
             </ul>
           </nav>
         </div>
@@ -152,8 +152,8 @@
         <!-- </div> -->
 		</div>
 
-         <div class="col-md-6 ftr">
-             <img src="{% static 'images/logo.png' %}" alt="">
+         <div class="col-md-6 ftr" style="text-align: right;">
+             <img class="footerlogo" src="{% static 'images/logo.png' %}" alt="" style="width: 15rem;">
          </div>
 
        <!-- <div class="col-sm-6 col-md-3">

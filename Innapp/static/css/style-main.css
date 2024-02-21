@@ -1041,6 +1041,7 @@ section > .container-fluid {
 /* -------- Header Nav ---------- */
 .header-nav {
   position: relative;
+  background-color: darkgrey;
 }
 .header-nav .header-nav-absolute-wrapper {
   width: 100%;
@@ -1051,7 +1052,7 @@ section > .container-fluid {
 /* -------- Menuzord ---------- */
 .menuzord-menu > li > a {
   font-size: 13px;
-  color: #333333;
+  color: #fffcfc;
 }
 .menuzord .menuzord-menu > li.active > a i,
 .menuzord .menuzord-menu > li:hover > a i,
@@ -1110,6 +1111,7 @@ section > .container-fluid {
 /* -------- Scrolltofixed ---------- */
 .header-nav .header-nav-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed {
   border-bottom: 1px solid #eee;
+  background-color: darkgray;
 }
 .header-nav .header-nav-absolute-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed .menuzord {
   border-right: 1px solid #eee;
@@ -1137,6 +1139,7 @@ section > .container-fluid {
   -webkit-transition: all 0.4s ease-in-out 0s;
   -o-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
+  
 }
 .header-nav.navbar-fixed-top {
   left: 0;

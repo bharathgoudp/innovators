@@ -30,7 +30,8 @@ def donorlist(request):
         bas=bas.filter(address=addres)
     return render(request,'donorslist.html',{'klm':bas})
 
-
+def donate(request):
+    return render(request, 'donate.html')
 
 def gallery(request):
     monimg = Moneyimg.objects.all()
